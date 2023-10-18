@@ -63,58 +63,62 @@
 //   a + b;
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-
 const arr = [{
-        "id": 2,
-        "description": "Sweet and savory sauces relishes spreads and seasonings",
-        "name": "Condiments"
+        id: 2,
+        description: "Sweet and savory sauces relishes spreads and seasonings",
+        name: "Condiments",
     },
     {
-        "id": 1,
-        "description": "Soft drinks coffees teas beers and ales",
-        "name": "Beverages"
+        id: 1,
+        description: "Soft drinks coffees teas beers and ales",
+        name: "Beverages",
     },
     {
-        "id": 3,
-        "description": "Desserts candies and sweet breads",
-        "name": "Confections"
+        id: 3,
+        description: "Desserts candies and sweet breads",
+        name: "Confections",
     },
     {
-        "id": 4,
-        "description": "Cheeses",
-        "name": "Dairy Products"
+        id: 4,
+        description: "Cheeses",
+        name: "Dairy Products",
     },
     {
-        "id": 5,
-        "description": "Breads crackers pasta and cereal",
-        "name": "Grains/Cereals"
+        id: 5,
+        description: "Breads crackers pasta and cereal",
+        name: "Grains/Cereals",
     },
     {
-        "id": 6,
-        "description": "Prepared meats",
-        "name": "Meat/Poultry"
+        id: 6,
+        description: "Prepared meats",
+        name: "Meat/Poultry",
     },
     {
-        "id": 7,
-        "description": "Dried fruit and bean curd",
-        "name": "Produce"
+        id: 7,
+        description: "Dried fruit and bean curd",
+        name: "Produce",
     },
     {
-        "id": 8,
-        "description": "Seaweed and fish",
-        "name": "Seafood"
-    }
-]
+        id: 8,
+        description: "Seaweed and fish",
+        name: "Seafood",
+    },
+];
 
-console.log(arr);
+// arr.sort(function(a, b) {
+//     if (a.description > b.description) {
+//         return 1;
+//     }
+//     if (a.description < b.description) {
+//         return -1;
+//     }
+//     return 0;
+// });
+// console.table(arr);
+
+
+
+function filterItems(arr, query) {
+    return arr.filter((x) => x.description.toLowerCase().includes(query.toLowerCase()));
+}
+console.table(filterItems(arr, "al"))
